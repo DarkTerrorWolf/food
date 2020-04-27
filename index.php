@@ -10,10 +10,16 @@ $f3 = Base::instance();
 
 //Route
 $f3->route('GET /', function () {
-    //echo "<h1>Welcome to my food page</h1>";
+    //.echo "<h1>Welcome to my food page</h1>";
     $view = new Template();
     echo $view->render("views/home.html");
-}
-);
+});
+$f3->route('GET /breakfast',function() {
+    //echo "<h1>Welcome to my Breakfast page </h1>";
+    $view = new Template();
+    echo $view->render("views/bfast.html");
+
+});
+
 
 $f3->run();
