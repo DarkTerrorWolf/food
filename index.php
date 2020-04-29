@@ -14,10 +14,32 @@ $f3->route('GET /', function () {
     $view = new Template();
     echo $view->render("views/home.html");
 });
+//breakfast route
 $f3->route('GET /breakfast',function() {
     //echo "<h1>Welcome to my Breakfast page </h1>";
     $view = new Template();
     echo $view->render("views/bfast.html");
+
+});
+//breakfast green eggs and ham route
+$f3->route('GET /breakfast/green-eggs',function() {
+    //echo "<h1>Welcome to my Breakfast page </h1>";
+    $view = new Template();
+    echo $view->render("views/greenEggsAndHam.html");
+
+});
+
+//breakfast green eggs and ham route
+$f3->route('GET /lunch',function() {
+    //echo "<h1>Welcome to my Breakfast page </h1>";
+    $view = new Template();
+    echo $view->render("views/lunch.html");
+
+});
+$f3->route('GET /order',function() {
+    //echo "<h1>Welcome to my Breakfast page </h1>";
+    $view = new Template();
+    echo $view->render("views/orderform.html");
 
 });
 
