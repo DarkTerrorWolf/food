@@ -65,6 +65,11 @@ $f3->route('GET|POST /order',function($f3) {
             session_destroy();
         }
     }
+    //other stuff
+    $meals = array('breakfast','lunch','dinner');
+    $f3->set('meals', $meals);
+
+    //render view
     $view = new Template();
     echo $view->render("views/orderform.html");
 

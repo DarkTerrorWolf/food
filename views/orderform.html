@@ -8,15 +8,18 @@
 
     <!-- bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
 
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href=""></head>
+    <link rel="shortcut icon" href="">
+</head>
 <body>
 <div class="container">
     <h1>What would you like to order?</h1>
@@ -35,11 +38,10 @@
         <!-- get meal -->
         <div class="form-group">
             <label class="col-sm-2 control-label">Select a meal</label>
-
             <div class="col-sm-4">
-                <input type="radio" name="meal" id="breakfast" value="breakfast"> Breakfast</input><br>
-                <input type="radio" name="meal" id="lunch" value="lunch"> Lunch</input><br>
-                <input type="radio" name="meal" id="dinner"value="dinner"> Dinner</input>
+                <repeat group="{{ @meals }}" value="{{ @meal }}">
+                    <input type="radio" name="meal" id="{{ @meal}}" value="{{ @meal}}">{{ ucfirst(@meal)}}</input><br>
+                </repeat>
             </div>
         </div>
 
